@@ -1,0 +1,16 @@
+[
+{
+  "modid": "nommablez",
+  "name": "Nommablez!",
+  "description": "Spicing up your food!.",
+  "version": "1.7.10-1.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["J3FF97"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
