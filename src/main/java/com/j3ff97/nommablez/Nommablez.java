@@ -26,6 +26,8 @@ public class Nommablez
         LogHelper.info("Nommablez! Starting PreInit");
         LogHelper.info("Made By: " + Reference.AUTHOR);
 
+        proxy.preInit(event);
+
         LogHelper.info("Nommablez! PreInit Complete!");
     }
 
@@ -34,6 +36,7 @@ public class Nommablez
     {
         LogHelper.info("Nommablez! Starting Init");
 
+        proxy.init(event);
 
         LogHelper.info("Nommablez! Init complete!");
     }
@@ -43,6 +46,7 @@ public class Nommablez
     {
         LogHelper.info("Nommablez! Starting PostInit");
 
+        proxy.postInit(event);
 
         LogHelper.info("Nommablez! PostInit complete");
         LogHelper.info("Nommablez! Loading Complete! Bon Appetit!");
