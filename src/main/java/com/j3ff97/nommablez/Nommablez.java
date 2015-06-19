@@ -3,24 +3,20 @@ package com.j3ff97.nommablez;
 import com.j3ff97.nommablez.proxy.CommonProxy;
 import com.j3ff97.nommablez.reference.Reference;
 import com.j3ff97.nommablez.utility.LogHelper;
-import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.minecraft.init.Blocks;
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Reference.ID, name= Reference.NAME,  version = Reference.VERSION, guiFactory = Reference.GUIFACTORY)
 public class Nommablez
 {
-    @Mod.Instance(Reference.ID)
-    public static Nommablez instance;
+    @Mod.Instance(Reference.ID) public static Nommablez instance;
 
-    @SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.SERVER_PROXY)
-    public static CommonProxy proxy;
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.SERVER_PROXY) public static CommonProxy proxy;
 
-    @EventHandler
+    @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         LogHelper.info("Nommablez! Starting PreInit");
@@ -31,7 +27,7 @@ public class Nommablez
         LogHelper.info("Nommablez! PreInit Complete!");
     }
 
-    @EventHandler
+    @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
         LogHelper.info("Nommablez! Starting Init");
@@ -41,7 +37,7 @@ public class Nommablez
         LogHelper.info("Nommablez! Init complete!");
     }
 
-    @EventHandler
+    @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
         LogHelper.info("Nommablez! Starting PostInit");
